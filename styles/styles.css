@@ -171,29 +171,38 @@ h1 {
 form {
   background-color: #00447C;
   border: 3px solid #EEC643;
-  border-radius: 5px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1rem;
-  font-size: calc(0.1rem + 1vw);
-  line-height: 1.6;
-  text-transform: lowercase; }
+  font-size: calc(0.3rem + 1vw);
+  line-height: 1.6; }
   form fieldset {
     background-color: #00447C;
-    border-radius: 5px;
     border: 0;
     margin-bottom: 1rem; }
     form fieldset p {
-      border-bottom: 3px solid #E85F5C; }
-  form label {
-    padding: 1rem;
-    border-radius: 5px; }
+      font-size: calc(0.5rem + 1vw);
+      border-bottom: 3px solid #E85F5C;
+      text-transform: uppercase; }
+  form .answers label {
+    padding: 1rem; }
   form .answers label:hover {
     background-color: #EEC643;
-    border-radius: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #121F27; }
   form .answers input[type="radio"]:checked + label {
     background: #EEC643;
-    border-radius: 5px; }
-    form .answers input[type="radio"]:checked + label label img {
+    color: #121F27; }
+    form .answers input[type="radio"]:checked + label img {
       border: 5px solid #EEC643;
       background: transparent;
       padding: 0; }
@@ -205,7 +214,8 @@ fieldset.question1 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 100%; }
   fieldset.question1 .answers {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -217,17 +227,59 @@ fieldset.question1 {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
 
+fieldset.question2 img {
+  border-top: 5px solid transparent; }
+
+fieldset.question2 img:hover {
+  border-top: 5px solid #EEC643; }
+
+fieldset.question3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  fieldset.question3 .answers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    fieldset.question3 .answers .ans {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+
 fieldset.question2 .answers, fieldset.question4 .answers, fieldset.question5 .answers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2rem; }
+  grid-gap: 2rem;
+  text-align: center; }
   fieldset.question2 .answers input[type=“radio”], fieldset.question4 .answers input[type=“radio”], fieldset.question5 .answers input[type=“radio”] {
     visibility: hidden; }
   fieldset.question2 .answers label, fieldset.question4 .answers label, fieldset.question5 .answers label {
     padding: 0;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    display: grid;
+    align-self: center; }
   fieldset.question2 .answers img, fieldset.question4 .answers img, fieldset.question5 .answers img {
     width: 100%; }
+
+.submitContainer {
+  margin: 2rem 0 1.5rem 0; }
+  .submitContainer input {
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    background: #E85F5C;
+    color: #EFF9F9; }
+  .submitContainer input:hover {
+    background: #EEC643;
+    color: #121F27; }
 
 header {
   padding: 2rem 10%;
@@ -241,13 +293,10 @@ header {
   text-align: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  align-items: center; }
   header h1 {
     color: #EEC643;
-    text-shadow: -1px 1px 0px #E85F5C, -2px 2px 0px #E85F5C, -3px 3px 0px #E85F5C, -4px 4px 0px #E85F5C, -5px 5px 0px #E85F5C, -6px 6px 0px #E85F5C, -7px 7px 0px #E85F5C, -8px 8px 0px #E85F5C, -9px 9px 0px #E85F5C, -10px 10px 0px #E85F5C, -11px 11px 0px #E85F5C, -12px 12px 0px #E85F5C, -13px 13px 0px #E85F5C, -14px 14px 0px #E85F5C, -15px 15px 0px #E85F5C, -16px 16px 0px #E85F5C, -17px 17px 0px #E85F5C, -18px 18px 0px #E85F5C, -19px 19px 0px #E85F5C, -20px 20px 0px #E85F5C, -21px 21px 0px #E85F5C, -22px 22px 0px #E85F5C, -23px 23px 0px #E85F5C, -24px 24px 0px #E85F5C, -25px 25px 0px #E85F5C, -26px 26px 0px #E85F5C, -27px 27px 0px #E85F5C, -28px 28px 0px #E85F5C, -29px 29px 0px #E85F5C, -30px 30px 0px #E85F5C, -31px 31px 0px #E85F5C, -32px 32px 0px #E85F5C, -33px 33px 0px #E85F5C, -34px 34px 0px #E85F5C, -35px 35px 0px #E85F5C, -36px 36px 0px #E85F5C, -37px 37px 0px #E85F5C;
+    text-shadow: -1px 1px 0px #E85F5C, -2px 2px 0px #E85F5C, -3px 3px 0px #E85F5C, -4px 4px 0px #E85F5C, -5px 5px 0px #E85F5C, -6px 6px 0px #E85F5C, -7px 7px 0px #E85F5C, -8px 8px 0px #E85F5C, -9px 9px 0px #E85F5C, -10px 10px 0px #E85F5C, -11px 11px 0px #E85F5C, -12px 12px 0px #E85F5C, -13px 13px 0px #E85F5C, -14px 14px 0px #E85F5C, -15px 15px 0px #E85F5C, -16px 16px 0px #E85F5C, -17px 17px 0px #E85F5C, -18px 18px 0px #E85F5C, -19px 19px 0px #E85F5C, -20px 20px 0px #E85F5C, -21px 21px 0px #E85F5C, -22px 22px 0px #E85F5C, -23px 23px 0px #E85F5C, -24px 24px 0px #E85F5C, -25px 25px 0px #E85F5C, -26px 26px 0px #E85F5C, -27px 27px 0px #E85F5C, -28px 28px 0px #E85F5C, -29px 29px 0px #E85F5C, -30px 30px 0px #E85F5C, -31px 31px 0px #E85F5C, -32px 32px 0px #E85F5C, -33px 33px 0px #E85F5C, -34px 34px 0px #E85F5C, -35px 35px 0px #E85F5C, -36px 36px 0px #E85F5C, -37px 37px 0px #E85F5C, -38px 38px 0px #E85F5C, -39px 39px 0px #E85F5C, -40px 40px 0px #E85F5C, -41px 41px 0px #E85F5C, -42px 42px 0px #E85F5C, -43px 43px 0px #E85F5C, -44px 44px 0px #E85F5C, -45px 45px 0px #E85F5C, -46px 46px 0px #E85F5C, -47px 47px 0px #E85F5C, -48px 48px 0px #E85F5C, -49px 49px 0px #E85F5C, -50px 50px 0px #E85F5C, -51px 51px 0px #E85F5C, -52px 52px 0px #E85F5C, -53px 53px 0px #E85F5C, -54px 54px 0px #E85F5C, -55px 55px 0px #E85F5C, -56px 56px 0px #E85F5C, -57px 57px 0px #E85F5C;
     font-size: calc(7rem + 1.5vw);
     text-transform: lowercase;
     line-height: 1;
@@ -257,4 +306,50 @@ header {
     color: #EFF9F9;
     line-height: 2;
     font-weight: 300;
-    letter-spacing: 5px; }
+    letter-spacing: 5px;
+    margin: 5rem auto 0; }
+
+section .resultWrapper {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  border: 3px solid #EEC643;
+  background: #E85F5C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  section .resultWrapper h3 {
+    text-transform: uppercase;
+    background: #00447C;
+    font-size: calc(0.5rem + 1.5vw); }
+  section .resultWrapper .image {
+    width: 49%;
+    margin: 0 auto;
+    padding: 2%;
+    background-color: #EEC643; }
+  section .resultWrapper h2.bandName {
+    color: #00447C;
+    font-family: 'Berkshire Swash', sans-serif;
+    font-size: calc(2rem + 1.5vw);
+    margin: 1rem 0; }
+  section .resultWrapper p.suggestedSong {
+    font-size: calc(0.4rem + 1vw);
+    margin: 0;
+    font-style: italic; }
+  section .resultWrapper img {
+    width: 100%; }
+  section .resultWrapper input {
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    margin: 0 auto;
+    background: #00447C;
+    color: #EFF9F9;
+    margin-bottom: 2rem; }
+  section .resultWrapper input:hover {
+    background: #EEC643;
+    color: #121F27; }

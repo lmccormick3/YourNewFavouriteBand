@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your New Favourite Band</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Roboto:400,500" rel="stylesheet">
-	<link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>Your New Favourite Band</title>
 </head>
 <body>
     <!-- HEADER SECTION STARTS -->
@@ -52,7 +54,7 @@
                         <div class="answer1 ans">
                             <input type="radio" name="scene" id="spicyScene" value="spicy">
                             <label for="spicyScene">
-                                <img src="assets/spicyScene.png" alt="">
+                                <img src="assets/spicyScene1.png" alt="">
                             </label>
                         </div>
                         <div class="answer2 ans">
@@ -64,13 +66,13 @@
                         <div class="answer3 ans">
                             <input type="radio" name="scene" id="happyScene" value="happy">
                             <label for="happyScene">
-                                <img src="assets/happyScene.png" alt="">
+                                <img src="assets/happyScene1.png" alt="">
                             </label>
                         </div>
                         <div class="answer4 ans">
                             <input type="radio" name="scene" id="chillScene" value="chill">
                             <label for="chillScene">
-                                <img src="assets/chillScene.png" alt="">
+                                <img src="assets/chillScene1.png" alt="">
                             </label>
                         </div>
                     </div>
@@ -79,7 +81,7 @@
                 <fieldset class="question3 ans">
                     <p>What are your plans for tonight?</p>
                     <div class="answers planAnswers">
-                        <div class="answer1">
+                        <div class="answer1 ans">
                             <input type="radio" name="plan" id="happyPlan" value="happy">
                             <label for="happyPlan">Going to see some friends and have lots of laughs.</label>
                         </div>
@@ -129,12 +131,12 @@
                     <div class="answers showAnswers">
                         <div class="answer1 ans">
                             <input type="radio" name="show" id="spicyShow" value="spicy">
-                            <label for="spicyShow">The Jimi Hendrix Experience Worldwide Tour, 1967
+                            <label for="spicyShow">The Jimi Hendrix Experience Tour, 1967
                             <img src="assets/spicyShow.png" alt="" title="https://www.rollingstone.com/music/lists/the-50-greatest-concerts-of-the-last-50-years-w478854/the-jimi-hendrix-experience-worldwide-tour-w478855"></label>
                         </div>
                         <div class="answer2 ans">
                             <input type="radio" name="show" id="happyShow" value="happy">
-                            <label for="happyShow">Woodstock, 1969
+                            <label for="happyShow">The Original Woodstock, 1969
                             <img src="assets/happyShow.png" alt="" title="https://lyrics.songonlyrics.net/category/lyrics/t/the-beach-boys"></label>
                         </div>
                         <div class="answer3 ans">
@@ -157,12 +159,18 @@
         </main>
             <!-- Results section -->
             <section class="result" style="display:block">
-                <h3>Your new favourite band is:</h3>
-                <div>
-                    <img src="" alt="" class="bandResult">
-                    <h2 class="bandName"></h2>
+                <div class="resultWrapper">
+                    <h3>Your new favourite band/artist is:</h3>
+                    <div>
+                        <div class="image">
+                            <img src="" alt="" class="bandResult">
+                        </div>
+                        <h2 class="bandName"></h2>
+                        <p class="suggestedSong"></p>
+                        <a class="songURL" href="">Have a listen now!</a>
+                    </div>
+                    <input type="reset" class="resetQuiz" value="Reset Quiz">
                 </div>
-                <input type="reset" class="resetQuiz" class="Reset Quiz">
             </section>
         </div>
     <!-- MAIN SECTION ENDS -->
