@@ -1,21 +1,21 @@
 form {
+    font-size: calc(0.3rem + 1vw);
+    line-height: 1.6;
     background-color: $primary;
     border: 3px solid $accent;
+    padding: 1rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    font-size: calc(0.3rem + 1vw);
-    line-height: 1.6;
     fieldset {
         background-color: $primary;
         border: 0;
         margin-bottom: 1rem;
         p {
             font-size: calc(0.5rem + 1vw);
-            border-bottom: 3px solid $secondary;
             text-transform: uppercase;
+            border-bottom: 3px solid $secondary;
         }
     }
     .answers {
@@ -23,16 +23,16 @@ form {
             padding: 1rem;
         }
         label:hover {
+            color: $black;
             background-color: $accent;
             cursor: pointer;
-            color: $black;
         }
         input[type="radio"]:checked + label {
-            background: $accent;
             color: $black;
+            background: $accent;
             img {
-                border: 5px solid $accent;
                 background: transparent;
+                border: 5px solid $accent;
                 padding: 0;
             }
         }
@@ -45,7 +45,6 @@ fieldset.question1 {
     width: 100%;
     .answers {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
     } 
 }
@@ -53,7 +52,6 @@ fieldset.question1 {
 fieldset.question2 {
     img {
     border-top: 5px solid transparent;
-  
     }
     img:hover {
         border-top: 5px solid $accent;
@@ -76,16 +74,17 @@ fieldset.question3 {
 
 fieldset.question2, fieldset.question4, fieldset.question5 {
     .answers {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 2rem;
         text-align: center;
-        input[type=“radio”]{visibility:hidden;}
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+        input[type=“radio”]{
+            visibility:hidden;
+        }
         label {
-            padding: 0;
             text-transform: capitalize;
+            padding: 0;
             display: grid;
-            align-self: center;
         }
         img {
             width: 100%;
@@ -94,16 +93,136 @@ fieldset.question2, fieldset.question4, fieldset.question5 {
 }
 
 .submitContainer {
-    margin: 2rem 0 1.5rem 0;
+    margin: 2rem 0;
     input {
         text-transform: uppercase;
-        padding: 1rem;
-        border: none;
-        background: $secondary;
         color: $white;
+        background: $secondary;
+        border: none;
+        padding: 1rem;
     }
-        input:hover {
-            background: $accent;
-            color: $black;
+    input:hover {
+        color: $black;
+        background: $accent;
+    }
+}
+
+
+// MEDIA QUERIES
+
+@media (max-width:710px) {
+    form {
+        fieldset {
+            p {
+            font-size: calc(0.3rem + 1vw);
+            }
+        }
+    }
+    fieldset.question5 {
+        .answers {
+            .answer2, .answer3 {
+                label {
+                    img {
+                        padding-top: 1.5rem;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        fieldset {
+            p {
+            font-size: calc(0.5rem + 1vw);
+            }
+        }
+        label {
+            font-size: calc(0.5rem + 1vw);
+        }
+    }
+   fieldset.question1 {
+    .answers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 8%;
+        .ans {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    } 
+}
+
+fieldset.question2 {
+    img {
+    border-top: 5px solid transparent;
+    }
+    img:hover {
+        border-top: 5px solid $accent;
+    }
+}
+
+fieldset.question3 {
+    display: flex;
+    flex-direction: column;
+    .answers {
+        display: grid;
+        grid-column-gap: 8%;
+        grid-template-columns: repeat(2, 1fr);
+        .ans {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+    } 
+}
+
+fieldset.question2, fieldset.question4, fieldset.question5 {
+    .answers {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 0;
+        input[type=“radio”]{
+            visibility:hidden;
+        }
+        label {
+            text-transform: capitalize;
+            padding: 0;
+            display: grid;
+        }
+        img {
+            width: 100%;
+        }
+    } 
+}
+
+.submitContainer {
+    margin: 2rem 0;
+    input {
+        text-transform: uppercase;
+        color: $white;
+        background: $secondary;
+        border: none;
+        padding: 1rem;
+    }
+    input:hover {
+        color: $black;
+        background: $accent;
+    }
+} 
+ fieldset.question5 {
+        .answers {
+            .answer2, .answer3 {
+                label {
+                    img {
+                        padding-top: 0rem;
+                    }
+                }
+            }
+        } 
     }
 }

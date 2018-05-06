@@ -1,12 +1,14 @@
 header {
+    text-align: center;
     padding: 2rem 10%;
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
-    // justify-content: flex-end;
-    // width: 100%;
-    h1 {
+    h1 {        
+        font-size: calc(5rem + 1.5vw);
+        text-transform: lowercase;
+        line-height: 1;
+        margin: 0;
         color: $accent;
         text-shadow: 
         -1px 1px 0px $secondary,
@@ -66,18 +68,118 @@ header {
         -55px 55px 0px $secondary,
         -56px 56px 0px $secondary,
         -57px 57px 0px $secondary;
-
-        font-size: calc(7rem + 1.5vw);
-        text-transform: lowercase;
-        line-height: 1;
-        margin: 0;
     }
     h2 {
-        font-size: calc(1rem + 1.5vw);
-        color: $white;
-        line-height: 2;
+        font-size: calc(0.5rem + 1.5vw);
         font-weight: 300;
-        letter-spacing: 5px;
-        margin: 5rem auto 0;
+        line-height: 2;
+        letter-spacing: 3px;
+        color: $white;
+        margin: 6rem auto 0;
     }
 }
+
+@media(max-width: 800px) {
+    header {
+        // text-align: left;
+        padding: 0rem 5% 0rem 5%;
+        // align-items: left;
+        h1 {  
+            width: 80%;      
+            font-size: calc(7rem + 1.5vw);
+            z-index: -1;
+            text-shadow: 
+            -1px 1px 0px $secondary,
+            -2px 2px 0px $secondary,
+            -3px 3px 0px $secondary,
+            -4px 4px 0px $secondary,
+            -5px 5px 0px $secondary,
+            -6px 6px 0px $secondary,
+            -7px 7px 0px $secondary,
+            -8px 8px 0px $secondary,
+            -9px 9px 0px $secondary,
+            -10px 10px 0px $secondary,
+            -11px 11px 0px $secondary,
+            -12px 12px 0px $secondary,
+            -13px 13px 0px $secondary,
+            -14px 14px 0px $secondary,
+            -15px 15px 0px $secondary,
+            -16px 16px 0px $secondary,
+            -17px 17px 0px $secondary,
+            -18px 18px 0px $secondary,
+            -19px 19px 0px $secondary,
+            -20px 20px 0px $secondary,
+            -21px 21px 0px $secondary,
+            -22px 22px 0px $secondary,
+            -23px 23px 0px $secondary,
+            -24px 24px 0px $secondary,
+            -25px 25px 0px $secondary,
+            -26px 26px 0px $secondary,
+            -27px 27px 0px $secondary,
+            -28px 28px 0px $secondary,
+            -29px 29px 0px $secondary,
+            -30px 30px 0px $secondary,
+            -31px 31px 0px $secondary,
+            -32px 32px 0px $secondary,
+            -33px 33px 0px $secondary,
+            -34px 34px 0px $secondary,
+            -35px 35px 0px $secondary,
+            -36px 36px 0px $secondary,
+            -37px 37px 0px $secondary,
+            -38px 38px 0px $secondary,
+            -39px 39px 0px $secondary,
+            -40px 40px 0px $secondary,
+            -41px 41px 0px $secondary,
+            -42px 42px 0px $secondary,
+            -43px 43px 0px $secondary,
+            -44px 44px 0px $secondary,
+            -45px 45px 0px $secondary,
+            -46px 46px 0px $secondary,
+            -47px 47px 0px $secondary,
+            -48px 48px 0px $secondary,
+            -49px 49px 0px $secondary,
+            -50px 50px 0px $secondary,
+            -51px 51px 0px $secondary,
+            -52px 52px 0px $secondary,
+            -53px 53px 0px $secondary,
+            -54px 54px 0px $secondary,
+            -55px 55px 0px $secondary,
+            -56px 56px 0px $secondary,
+            -57px 57px 0px $secondary,
+            -58px 58px 0px $secondary,
+            -59px 59px 0px $secondary,
+            -60px 60px 0px $secondary,
+            -61px 61px 0px $secondary,
+            -62px 62px 0px $secondary,
+            -63px 63px 0px $secondary,
+            -64px 64px 0px $secondary,
+            -65px 65px 0px $secondary,
+            -66px 66px 0px $secondary,
+            -67px 67px 0px $secondary,
+            -68px 68px 0px $secondary,
+            -69px 69px 0px $secondary,
+            -70px 70px 0px $secondary,
+            -71px 71px 0px $secondary,
+            -72px 72px 0px $secondary,
+            -73px 73px 0px $secondary,
+            -74px 74px 0px $secondary,
+            -75px 75px 0px $secondary,
+            -76px 76px 0px $secondary,
+            -77px 77px 0px $secondary;
+        }
+        h2 {
+             margin: 0;
+             visibility: hidden;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    header {
+        h1 {
+            font-size: calc(5rem + 1.5vw);
+    
+        }
+    }
+}
+

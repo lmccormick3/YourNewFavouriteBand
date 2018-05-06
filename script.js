@@ -32,19 +32,19 @@ const bands = {
             title: "Air France",
             image: "assets/airFrance.png",
             suggestedSong: "No Excuses",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=FTPO6XM_IxM"
         },
         {
             title: "Los Campesinos!",
             image: "assets/losCampesinos.png",
-            suggestedSong: "Avocado, Baby!",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            suggestedSong: "Avocado, Baby",
+            songURL: "https://www.youtube.com/watch?v=JjzyKLrRDGA"
         }, 
         {
             title: "Wildcat! Wildcat!",
             image: "assets/wildcatWildcat.png",
             suggestedSong: "Mr. Quiche",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=d3pYGE7bOhQ"
         }
     ],
     spicy: [
@@ -52,13 +52,13 @@ const bands = {
             title: "Sylvan LaCue",
             image: "assets/sylvanLaCue.png",
             suggestedSong: "Grateful",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=x6i4usHqm5Q"
         },
         {
             title: "Chester Watson",
             image: "assets/chesterWatson.png",
             suggestedSong: "Picbascassquiato",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=Yr8rvUTQ9aw"
         }
     ],
     meh: [
@@ -66,13 +66,13 @@ const bands = {
             title: "Craig Cardiff",
             image: "assets/craigCardiff.png",
             suggestedSong: "Dirty Old Town",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=bbz9rIxZJBw"
         },
         {
             title: "Dawn Golden",
             image: "assets/dawnGolden.png",
             suggestedSong: "Discoloration",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=sE_TKkNi9E8"
         }
     ],
     chill: [
@@ -80,19 +80,19 @@ const bands = {
             title: "Blood Orange",
             image: "assets/bloodOrange.png",
             suggestedSong: "Chosen",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=gzDTMEo-g2k"
         },
         {
             title: "Chris Staples",
             image: "assets/chrisStaples.png",
             suggestedSong: "Cheap Shades",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=-xUPcvvMHNI"
         },
         {
             title: "Baths",
             image: "assets/baths.png",
             suggestedSong: "Animals",
-            songURL: "https://www.youtube.com/watch?v=F8Z81lL1aZE"
+            songURL: "https://www.youtube.com/watch?v=dHvWURUzj3Q"
         }
     ]
 }
@@ -148,8 +148,7 @@ $('input[type=radio]').on('change', function(){
             $('.bandName').html(resultBand);
             const resultSong = finalBand.suggestedSong;
             $('.suggestedSong').html(`<p>Start exploring their music with the song "${resultSong}"`);
-            const songURL = finalBand.songURL;
-            $('.suggestedSong').attr('href', finalBand.songURL);
+            $('.songURL').attr('href', finalBand.songURL);
         }
 
         const getRandomBand = function (array) {
