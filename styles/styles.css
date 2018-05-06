@@ -279,7 +279,7 @@ fieldset.question2 .answers, fieldset.question4 .answers, fieldset.question5 .an
 @media (max-width: 710px) {
   form fieldset p {
     font-size: calc(0.3rem + 1vw); }
-  fieldset.question5 .answers .answer2 label img, fieldset.question5 .answers .answer3 label img {
+  fieldset.question5 .answers .answer2 label img, fieldset.question5 .answers .answer3 label img, fieldset.question5 .answers .answer4 label img {
     padding-top: 1.5rem; } }
 
 @media (max-width: 600px) {
@@ -314,7 +314,7 @@ fieldset.question2 .answers, fieldset.question4 .answers, fieldset.question5 .an
     flex-direction: column; }
     fieldset.question3 .answers {
       display: grid;
-      grid-column-gap: 8%;
+      grid-gap: 8%;
       grid-template-columns: repeat(2, 1fr); }
       fieldset.question3 .answers .ans {
         text-align: center;
@@ -329,28 +329,8 @@ fieldset.question2 .answers, fieldset.question4 .answers, fieldset.question5 .an
     text-align: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    padding: 0; }
-    fieldset.question2 .answers input[type=“radio”], fieldset.question4 .answers input[type=“radio”], fieldset.question5 .answers input[type=“radio”] {
-      visibility: hidden; }
-    fieldset.question2 .answers label, fieldset.question4 .answers label, fieldset.question5 .answers label {
-      text-transform: capitalize;
-      padding: 0;
-      display: grid; }
-    fieldset.question2 .answers img, fieldset.question4 .answers img, fieldset.question5 .answers img {
-      width: 100%; }
-  .submitContainer {
-    margin: 2rem 0; }
-    .submitContainer input {
-      text-transform: uppercase;
-      color: #EFF9F9;
-      background: #E85F5C;
-      border: none;
-      padding: 1rem; }
-    .submitContainer input:hover {
-      color: #121F27;
-      background: #EEC643; }
-  fieldset.question5 .answers .answer2 label img, fieldset.question5 .answers .answer3 label img {
+    grid-gap: 1rem; }
+  fieldset.question5 .answers .answer2 label img, fieldset.question5 .answers .answer3 label img, fieldset.question5 .answers .answer4 label img {
     padding-top: 0rem; } }
 
 header {
@@ -427,7 +407,8 @@ section .resultWrapper {
   section .resultWrapper p.suggestedSong {
     font-size: calc(0.4rem + 1vw);
     margin: 0;
-    font-style: italic; }
+    font-style: italic;
+    margin: 0 1rem; }
   section .resultWrapper img {
     width: 100%; }
   section .resultWrapper a.songURL {
@@ -467,58 +448,19 @@ section .resultWrapper {
 
 @media (max-width: 650px) {
   section .resultWrapper {
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-    border: 3px solid #EEC643;
-    background: #E85F5C;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
+    width: 50%; }
     section .resultWrapper h3 {
-      text-transform: uppercase;
-      background: #00447C;
       font-size: calc(0.8rem + 1vw); }
     section .resultWrapper .image {
-      width: 75%;
-      margin: 0 auto;
-      padding: 2%;
-      background-color: #EEC643; }
-    section .resultWrapper h2.bandName {
-      color: #00447C;
-      font-family: 'Berkshire Swash', sans-serif;
-      font-size: calc(2rem + 1.5vw);
-      margin: 1rem 0 0.5rem 0; }
+      width: 75%; }
     section .resultWrapper p.suggestedSong {
-      font-size: calc(0.8rem + 1vw);
-      margin: 0;
-      font-style: italic; }
-    section .resultWrapper img {
-      width: 100%; }
+      font-size: calc(0.8rem + 1vw); }
     section .resultWrapper a.songURL {
-      text-decoration: none;
-      color: #EEC643;
-      font-size: calc(0.8rem + 1vw);
-      margin-bottom: 0rem;
-      letter-spacing: 3px;
-      text-transform: uppercase; }
-    section .resultWrapper a.songURL:hover {
-      color: #00447C; }
-    section .resultWrapper input {
-      text-transform: uppercase;
-      font-size: calc(0.5rem + 1vw);
-      padding: 1rem;
-      border: none;
-      margin: 1rem auto 2rem auto;
-      background: #00447C;
-      color: #EFF9F9; }
-    section .resultWrapper input:hover {
-      background: #EEC643;
-      color: #121F27; } }
+      font-size: calc(0.8rem + 1vw); } }
+
+@media (max-width: 400px) {
+  section .resultWrapper {
+    width: 60%; } }
 
 footer {
   margin: 5rem auto 0 auto; }

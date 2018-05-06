@@ -1,4 +1,5 @@
-const vibe = [ //declaring genres/vibes array
+//declaring genres/vibes array
+const vibe = [ 
     {
         genre: "meh",
         counter: 0
@@ -14,6 +15,7 @@ const vibe = [ //declaring genres/vibes array
     }, 
 ]
 
+// declaring bands within genres
 const bands = {
     happy: [
         {
@@ -33,18 +35,18 @@ const bands = {
             image: "assets/airFrance.png",
             suggestedSong: "No Excuses",
             songURL: "https://www.youtube.com/watch?v=FTPO6XM_IxM"
-        },
-        {
-            title: "Los Campesinos!",
-            image: "assets/losCampesinos.png",
-            suggestedSong: "Avocado, Baby",
-            songURL: "https://www.youtube.com/watch?v=JjzyKLrRDGA"
         }, 
         {
             title: "Wildcat! Wildcat!",
             image: "assets/wildcatWildcat.png",
             suggestedSong: "Mr. Quiche",
             songURL: "https://www.youtube.com/watch?v=d3pYGE7bOhQ"
+        },
+        {
+            title: "TV Girl",
+            image: "assets/tvGirl.png",
+            suggestedSong: "Heaven Is A Bedroom",
+            songURL: "https://www.youtube.com/watch?v=Q-7hMD2OgBc"
         }
     ],
     spicy: [
@@ -59,6 +61,18 @@ const bands = {
             image: "assets/chesterWatson.png",
             suggestedSong: "Picbascassquiato",
             songURL: "https://www.youtube.com/watch?v=Yr8rvUTQ9aw"
+        },
+        {
+            title: "Los Campesinos!",
+            image: "assets/losCampesinos.png",
+            suggestedSong: "Avocado, Baby",
+            songURL: "https://www.youtube.com/watch?v=JjzyKLrRDGA"
+        },
+        {
+            title: "Meyhem Lauren",
+            image: "assets/meyhemLauren.png",
+            suggestedSong: "Thousand Dollar Gym Shoes",
+            songURL: "https://www.youtube.com/watch?v=xWjZPNYWEME"
         }
     ],
     meh: [
@@ -69,10 +83,22 @@ const bands = {
             songURL: "https://www.youtube.com/watch?v=bbz9rIxZJBw"
         },
         {
+            title: "Phoebe Bridgers",
+            image: "assets/phoebeBridgers.png",
+            suggestedSong: "Motion Sickness",
+            songURL: "https://www.youtube.com/watch?v=9sfYpolGCu8"
+        },
+        {
             title: "Dawn Golden",
             image: "assets/dawnGolden.png",
             suggestedSong: "Discoloration",
             songURL: "https://www.youtube.com/watch?v=sE_TKkNi9E8"
+        },
+        {
+            title: "Alberta Cross",
+            image: "assets/albertaCross.png",
+            suggestedSong: "Isolation",
+            songURL: "https://www.youtube.com/watch?v=OIIDTrYzqz8"
         }
     ],
     chill: [
@@ -93,14 +119,15 @@ const bands = {
             image: "assets/baths.png",
             suggestedSong: "Animals",
             songURL: "https://www.youtube.com/watch?v=dHvWURUzj3Q"
+        },
+        {
+            title: "Iamamiwhoami",
+            image: "assets/iamamiwhoami.png",
+            suggestedSong: "Play",
+            songURL: "https://www.youtube.com/watch?v=dHvWURUzj3Q"
         }
     ]
 }
-
-$('input[type=radio]').on('change', function(){
-    // const selectedButton = document.querySelector('input[type=radio]:checked');
-    $('input[type=radio]:checked label').addClass('selected');
-});
 
 
 // document ready starts 
@@ -117,8 +144,10 @@ $('input[type=radio]').on('change', function(){
         const answer4 = $('input[name=timeless]:checked').val();
         const answer5 = $('input[name=show]:checked').val();
 
+        // storing all user answers in one variable:
         const userAnswers = [answer1, answer2, answer3, answer4, answer5];
 
+        // function to have the object counter increment for every answer the user inputs that matches a genre:
         userAnswers.forEach((ans) => {
             vibe.forEach((vibe) => {
                 if(vibe.genre === ans) {
@@ -130,8 +159,7 @@ $('input[type=radio]').on('change', function(){
         getResult(vibe)
     });
 
-    
-    // Generating result:
+    // Generating genre with highest counter:
         function getResult(vibe) {
             let max = 0;
             let final;
@@ -143,6 +171,7 @@ $('input[type=radio]').on('change', function(){
             }
             const finalBand = getRandomBand(bands[final.genre]);
 
+            // jQuery selectors to add to the Results HTML page:
             $('.bandResult').attr('src', finalBand.image);
             const resultBand = finalBand.title;
             $('.bandName').html(resultBand);
@@ -150,20 +179,20 @@ $('input[type=radio]').on('change', function(){
             $('.suggestedSong').html(`<p>Start exploring their music with the song "${resultSong}"`);
             $('.songURL').attr('href', finalBand.songURL);
         }
-
+        // function to generate the actual band result from the genre with the highest counter which will then be presented on the screen:
         const getRandomBand = function (array) {
             const randomBand = Math.floor(Math.random() * array.length);
             return array[randomBand];
         }
-        
-
     });
     
+    // to switch the screens from the quiz to the result:
     $('.submit').on('click', function(){
         $('.quiz').hide();
-        $('.result').fadeToggle();
+        $('.result').fadeIn('slow');
 
+        // function to clear quiz result and return to main quiz page upon click:
         $('.resetQuiz').on('click', function () {
             window.location.reload(true);
-    }); //document ready ends
-});
+    }); 
+}); //document ready ends

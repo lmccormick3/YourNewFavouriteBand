@@ -109,7 +109,6 @@ fieldset.question2, fieldset.question4, fieldset.question5 {
 
 
 // MEDIA QUERIES
-
 @media (max-width:710px) {
     form {
         fieldset {
@@ -120,7 +119,7 @@ fieldset.question2, fieldset.question4, fieldset.question5 {
     }
     fieldset.question5 {
         .answers {
-            .answer2, .answer3 {
+            .answer2, .answer3, .answer4 {
                 label {
                     img {
                         padding-top: 1.5rem;
@@ -142,81 +141,51 @@ fieldset.question2, fieldset.question4, fieldset.question5 {
             font-size: calc(0.5rem + 1vw);
         }
     }
-   fieldset.question1 {
-    .answers {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 8%;
-        .ans {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-    } 
-}
-
-fieldset.question2 {
-    img {
-    border-top: 5px solid transparent;
-    }
-    img:hover {
-        border-top: 5px solid $accent;
-    }
-}
-
-fieldset.question3 {
-    display: flex;
-    flex-direction: column;
-    .answers {
-        display: grid;
-        grid-column-gap: 8%;
-        grid-template-columns: repeat(2, 1fr);
-        .ans {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-    } 
-}
-
-fieldset.question2, fieldset.question4, fieldset.question5 {
-    .answers {
-        text-align: center;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
-        padding: 0;
-        input[type=“radio”]{
-            visibility:hidden;
-        }
-        label {
-            text-transform: capitalize;
-            padding: 0;
-            display: grid;
-        }
-        img {
-            width: 100%;
-        }
-    } 
-}
-
-.submitContainer {
-    margin: 2rem 0;
-    input {
-        text-transform: uppercase;
-        color: $white;
-        background: $secondary;
-        border: none;
-        padding: 1rem;
-    }
-    input:hover {
-        color: $black;
-        background: $accent;
-    }
-} 
- fieldset.question5 {
+    fieldset.question1 {
         .answers {
-            .answer2, .answer3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 8%;
+            .ans {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        } 
+    }
+    fieldset.question2 {
+        img {
+        border-top: 5px solid transparent;
+        }
+        img:hover {
+            border-top: 5px solid $accent;
+        }
+    }
+    fieldset.question3 {
+        display: flex;
+        flex-direction: column;
+        .answers {
+            display: grid;
+            grid-gap: 8%;
+            grid-template-columns: repeat(2, 1fr);
+            .ans {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+        } 
+    }
+    fieldset.question2, fieldset.question4, fieldset.question5 {
+        .answers {
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+        } 
+    }
+    fieldset.question5 {
+        .answers {
+            .answer2, .answer3, .answer4 {
                 label {
                     img {
                         padding-top: 0rem;

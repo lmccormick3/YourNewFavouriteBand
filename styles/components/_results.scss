@@ -28,6 +28,7 @@ section {
             font-size: calc(0.4rem + 1vw);
             margin: 0;
             font-style: italic;
+            margin: 0 1rem;
         }
         img {
             width: 100%;
@@ -68,79 +69,44 @@ section {
             .image {
                 width: 75%;
             }
-                    input {
-            text-transform: uppercase;
-            font-size: calc(0.5rem + 1vw);
-            padding: 1rem;
-            border: none;
-            margin: 1rem auto 2rem auto;
-            background: $primary;
-            color: $white;
-        }
+            input {
+                text-transform: uppercase;
+                font-size: calc(0.5rem + 1vw);
+                padding: 1rem;
+                border: none;
+                margin: 1rem auto 2rem auto;
+                background: $primary;
+                color: $white;
+            }
         }
     }
 }
 
 @media(max-width: 650px) {
-section {
-    .resultWrapper {
-        text-align: center;
-        width: 50%;
-        margin: 0 auto;
-        border: 3px solid $accent;
-        background: $secondary;
-        display: flex;
-        flex-direction: column;
-        h3 {
-            text-transform: uppercase;
-            background: $primary;
-            font-size: calc(0.8rem + 1vw);
+    section {
+        .resultWrapper {
+            width: 50%;
+            h3 {
+                font-size: calc(0.8rem + 1vw);
+            }
+            .image {
+                width: 75%;
+            }
+            p.suggestedSong {
+                font-size: calc(0.8rem + 1vw);
+            }
+            a.songURL {
+                font-size: calc(0.8rem + 1vw);
+            }
         }
-        .image {
-            width: 75%;
-            margin: 0 auto;
-            padding: 2%;
-            background-color: $accent;
-        }
-        h2.bandName {
-            color: $primary;
-            font-family: 'Berkshire Swash', sans-serif;
-            font-size: calc(2rem + 1.5vw);
-            margin: 1rem 0 0.5rem 0;
-        }
-        p.suggestedSong {
-            font-size: calc(0.8rem + 1vw);
-            margin: 0;
-            font-style: italic;
-        }
-        img {
-            width: 100%;
-        }
-        a.songURL {
-            text-decoration: none;
-            color: $accent; 
-            font-size: calc(0.8rem + 1vw);
-            margin-bottom: 0rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-        a.songURL:hover {
-            color: $primary;
-        }
-        input {
-            text-transform: uppercase;
-            font-size: calc(0.5rem + 1vw);
-            padding: 1rem;
-            border: none;
-            margin: 1rem auto 2rem auto;
-            background: $primary;
-            color: $white;
-        }
-        input:hover {
-            background: $accent;
-            color: $black;
-        }
-
     }
 }
+
+@media(max-width: 400px) {
+    section {
+        .resultWrapper {
+            width: 60%;
+        }
+    }
 }
+
